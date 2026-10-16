@@ -246,3 +246,224 @@ button {
     max-width: 100%;
     font: inherit;
 }
+/* =========================
+   Mobile Responsive Design
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* جلوگیری از بیرون زدن محتوا */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* منوی بالای سایت */
+    .topbar {
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbarL {
+        padding: 10px 25px;
+        justify-content: center;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .navbar li {
+        float: none;
+    }
+
+    .navbar li a {
+        display: inline-block;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* تصویر اصلی و متن روی آن */
+    .hero img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .text {
+        right: 5%;
+        left: 5%;
+        width: 90%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+    }
+
+    .text h1 {
+        font-size: clamp(24px, 6vw, 36px);
+        line-height: 1.5;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    /* عنوان بخش‌ها */
+    .center {
+        padding: 20px 12px;
+    }
+
+    .center h1 {
+        font-size: 25px;
+    }
+
+    /* کارت‌های خدمات */
+    .mine {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0 12px;
+    }
+
+    .box {
+        width: calc(50% - 10px);
+        height: auto;
+        min-height: 200px;
+        margin: 0;
+        padding: 15px 8px;
+        overflow-wrap: anywhere;
+    }
+
+    .box h2 {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* بخش درباره ما */
+    .mine2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 25px 15px;
+    }
+
+    .box2 {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .box2 h1 {
+        font-size: 24px;
+        line-height: 1.7;
+    }
+
+    .box2 h2 {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .mine2 img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* گالری تصاویر */
+    .gallery {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 12px;
+    }
+
+    .gallery img {
+        width: calc(50% - 8px);
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* کارت‌های تعرفه */
+    .mine3 {
+        padding: 0 12px;
+        gap: 12px;
+    }
+
+    .box3 {
+        width: calc(50% - 8px);
+        padding: 12px 8px;
+    }
+
+    .box3 h2 {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* فوتر */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding: 25px 15px;
+    }
+
+    .footer-brand,
+    .footer-info,
+    .footer-links {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer-brand img {
+        margin: 15px auto 0;
+    }
+
+    .footer-info p {
+        overflow-wrap: anywhere;
+        line-height: 1.9;
+    }
+
+}
+
+/* تنظیمات گوشی‌های باریک */
+@media (max-width: 380px) {
+
+    .box {
+        width: 100%;
+    }
+
+    .box3 {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text h1 {
+        font-size: 24px;
+    }
+
+}
